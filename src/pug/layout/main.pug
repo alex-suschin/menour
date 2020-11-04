@@ -1,0 +1,105 @@
+include ../helpers/mixins
+block variables
+
+doctype html
+html(lang="ru-RU")
+	head
+		meta(charset="utf-8")
+		title #{title}
+		meta(name="viewport" content="width=320, initial-scale=1")
+		meta(name="keywords" content="")
+		link(rel="stylesheet" type='text/css' href="assets/css/vendors.css" media="all")
+		link(rel="stylesheet" type='text/css' href="assets/css/style.css" media="all")
+	body
+		include ../components/header/header
+
+		div(class='top-wrap')
+			div(class='container')
+				div(class='row')
+					div(class='top-wrap__left')
+						div(class='title') Сервис проверенных мужей на час
+						ul(class='top-list')
+							li Высококвалифицированный персонал с опытом от 7 лет
+							li Строгий отбор перед принятием на работу
+							li Решаем самые сложные задачи
+						p Приедем за 60 минут в пределах города
+						a(class='btn', href='#') Вызвать мастера
+					div(class='top-wrap__right')
+						div(class='master-slider-container swiper-container')
+							div(class='master-slider-wrapper swiper-wrapper')
+								div(class='master-slider-slide swiper-slide')
+									div(class='master-slider-slide--img') <img src="assets/images/sl-1.jpg" alt="" />
+									div(class='master-slider-slide--content') <span>Виктор Александрович</span> опыт работы более <b>16 лет</b>
+								div(class='master-slider-slide swiper-slide')
+									div(class='master-slider-slide--img') <img src="assets/images/sl-1.jpg" alt="" />
+									div(class='master-slider-slide--content') <span>Виктор Александрович</span> опыт работы более <b>16 лет</b>
+								div(class='master-slider-slide swiper-slide')
+									div(class='master-slider-slide--img') <img src="assets/images/sl-1.jpg" alt="" />
+									div(class='master-slider-slide--content') <span>Виктор Александрович</span> опыт работы более <b>16 лет</b>
+								div(class='master-slider-slide swiper-slide')
+									div(class='master-slider-slide--img') <img src="assets/images/sl-1.jpg" alt="" />
+									div(class='master-slider-slide--content') <span>Виктор Александрович</span> опыт работы более <b>16 лет</b>
+							div(class='swiper-pagination-master')
+							div(class='swiper-button-prev-master')
+							div(class='swiper-button-next-master')
+
+		div(class='services')
+			div(class='container')
+				div(class='title') Наши услуги
+				div(class='row')
+					div(class='services-slider-container swiper-container')
+						div(class='services-slider-wrapper swiper-wrapper')
+							div(class='services-slider-slide swiper-slide')
+								div(class='services-slider-slide--img') <img src="assets/images/serv-1.jpg" alt="" />
+								div(class='services-slider-slide--text') Сантехника
+							div(class='services-slider-slide swiper-slide')
+								div(class='services-slider-slide--img') <img src="assets/images/serv-2.jpg" alt="" />
+								div(class='services-slider-slide--text') Грузовые работы
+							div(class='services-slider-slide swiper-slide')
+								div(class='services-slider-slide--img') <img src="assets/images/serv-3.jpg" alt="" />
+								div(class='services-slider-slide--text') Монтаж/Демонтаж
+							div(class='services-slider-slide swiper-slide')
+								div(class='services-slider-slide--img') <img src="assets/images/serv-4.jpg" alt="" />
+								div(class='services-slider-slide--text') Бытовой ремонт
+							div(class='services-slider-slide swiper-slide')
+								div(class='services-slider-slide--img') <img src="assets/images/serv-4.jpg" alt="" />
+								div(class='services-slider-slide--text') Бытовой ремонт
+							div(class='services-slider-slide swiper-slide')
+								div(class='services-slider-slide--img') <img src="assets/images/serv-4.jpg" alt="" />
+								div(class='services-slider-slide--text') Бытовой ремонт
+					div(class='swiper-pagination-services')
+						div(class='swiper-button-prev-services')
+						div(class='swiper-button-next-services')
+		div(class='form-sale-wrap')
+			div(class='container')
+				div(class='row')
+					div(class='form-sale-box')
+						div(class='form-box-sale__left') При заказе с сайта скидка 15%
+						div(class='form-box-sale__right')
+							form(class='form-sale', method='POST', action='/')
+								span <input type='text' placeholder='Ваше имя' />
+								span <input type='tel' placeholder='Номер телефона' />
+								button(type='submit', class='btn') Перезвоните мне
+							div(class='agree') Нажимая кнопку “Перезвоните мне” Вы соглашаетесь на обработку Ваших данных
+							div(class='sale-gift') <span>15%</span>
+		div(class='why-our-wrap')
+			div(class='container')
+				div(class='row')
+					div(class='why-our-box')
+						div(class='why-our-box__left')
+							div(class='title') Почему именно мы?
+							p Таким образом новая модель организационной 
+							|деятельности позволяет оценить значение новых 
+							|предложений. С другой стороны новая модель 
+							|организационной деятельности способствует 
+							|подготовки и реализации модели развития.
+						div(class='why-our-box_right')
+				
+
+
+
+		include ../components/modal/modal
+		block content
+		script(src="assets/js/vendors.js")
+		script(src="assets/js/scripts.js")
+		block script
