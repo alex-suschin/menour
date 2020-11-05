@@ -130,7 +130,7 @@ button {
 }
 
 .top-wrap__left {
-    width: 50%;
+    width: 54%;
     p {
         color: white;
         font-size: 16px;
@@ -161,9 +161,10 @@ button {
         color: #fda522;
         font-size: 16px;
         font-weight: 500;
-        line-height: 25px;
+        line-height: 20px;
         letter-spacing: 0.01em;
         padding: 0 0 0 18px;
+        margin-bottom: 10px;
     }
     li:before {
         content: '';
