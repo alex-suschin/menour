@@ -221,6 +221,7 @@
     justify-content: flex-end;
     align-items: center;
     a.phone {
+        position: relative;
         color: white;
         font-family: 'Circe';
         font-size: 16px;
@@ -228,6 +229,16 @@
         font-weight: 700;
         margin-right: 9px;
         margin-top: 6px;
+    }
+    a.phone::before {
+        position: absolute;
+        top: 5px;
+        left: -19px;
+        content: '';
+        display: block;
+        width: 13px;
+        height: 13px;
+        background: url(../images/call.svg) no-repeat center;
     }
     a.btn {
         max-width: 137px;
