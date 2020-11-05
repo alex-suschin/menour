@@ -23,7 +23,7 @@ html(lang="ru-RU")
 							li Строгий отбор перед принятием на работу
 							li Решаем самые сложные задачи
 						p Приедем за 60 минут в пределах города
-						a(class='btn', href='#') Вызвать мастера
+						a(class='btn', href="javascript:void (0);", data-toggle="modal", data-target="#modal") Вызвать мастера
 					div(class='top-wrap__right')
 						div(class='master-slider-container swiper-container')
 							div(class='master-slider-wrapper swiper-wrapper')
@@ -43,7 +43,7 @@ html(lang="ru-RU")
 							div(class='swiper-button-prev-master')
 							div(class='swiper-button-next-master')
 
-		div(class='services')
+		div(class='services', id='services')
 			div(class='container')
 				div(class='title') Наши услуги
 				div(class='row')
@@ -68,8 +68,6 @@ html(lang="ru-RU")
 								div(class='services-slider-slide--img') <img src="assets/images/serv-4.jpg" alt="" />
 								div(class='services-slider-slide--text') Бытовой ремонт
 					div(class='swiper-pagination-services')
-						div(class='swiper-button-prev-services')
-						div(class='swiper-button-next-services')
 		div(class='form-sale-wrap')
 			div(class='container')
 				div(class='row')
@@ -79,24 +77,84 @@ html(lang="ru-RU")
 							form(class='form-sale', method='POST', action='/')
 								span <input type='text' placeholder='Ваше имя' />
 								span <input type='tel' placeholder='Номер телефона' />
+								span(class='hidden') <input type='hidden' value='Форма со скидкой 15%' />
 								button(type='submit', class='btn') Перезвоните мне
 							div(class='agree') Нажимая кнопку “Перезвоните мне” Вы соглашаетесь на обработку Ваших данных
-							div(class='sale-gift') <span>15%</span>
-		div(class='why-our-wrap')
+							div(class='sale-gift')
+							div(class='sale-gift-value') 15%
+		div(class='why-our-wrap', id='about')
+			div(class='why-our-box')
+				div(class='why-our-box__left' style='background-image: url(assets/images/why-left.jpg);')
+					div(class='title') Почему именно мы?
+					<p>Таким образом новая модель организационной деятельности позволяет оценить значение новых предложений. С другой стороны новая модель организационной деятельности способствует одготовки и реализации модели развития.</p>
+				div(class='why-our-box_right') <img src="assets/images/why-right.jpg" alt="" />
+
+		div(class='rewiews', id='rewiews')
+			div(class='container')
+				div(class='title') Отзывы наших клиентов
+				div(class='rewiews-slider-container swiper-container')
+					div(class='rewiews-slider-wrapper swiper-wrapper')
+						div(class='rewiews-slider-slide swiper-slide')
+							div(class='rewiews-slider-slide__left') <img src="assets/images/rew-1.jpg" alt="" />
+							div(class='rewiews-slider-slide__right')
+								div(class='rewiews-slider-title') Полное подключение сантехники в доме
+								div(class='rewiews-slider-desc')
+									<p>Таким образом новая модель организационной деятельности позволяет оценить значение новых предложений. С другой стороны новая модель организационной деятельности способствует подготовки и реализации модели развития.</p>
+								div(class='rewiews-slider-bottom')
+									div(class='rewiews-slider-time') Срок подключения 1 день
+									div(class='rewiews-slider-autor') Александра
+						div(class='rewiews-slider-slide swiper-slide')
+							div(class='rewiews-slider-slide__left') <img src="assets/images/rew-1.jpg" alt="" />
+							div(class='rewiews-slider-slide__right')
+								div(class='rewiews-slider-title') Полное подключение сантехники в доме
+								div(class='rewiews-slider-desc')
+									<p>Таким образом новая модель организационной деятельности позволяет оценить значение новых предложений. С другой стороны новая модель организационной деятельности способствует подготовки и реализации модели развития.</p>
+								div(class='rewiews-slider-bottom')
+									div(class='rewiews-slider-time') Срок подключения 1 день
+									div(class='rewiews-slider-autor') Александра
+						div(class='rewiews-slider-slide swiper-slide')
+							div(class='rewiews-slider-slide__left') <img src="assets/images/rew-1.jpg" alt="" />
+							div(class='rewiews-slider-slide__right')
+								div(class='rewiews-slider-title') Полное подключение сантехники в доме
+								div(class='rewiews-slider-desc')
+									<p>Таким образом новая модель организационной деятельности позволяет оценить значение новых предложений. С другой стороны новая модель организационной деятельности способствует подготовки и реализации модели развития.</p>
+								div(class='rewiews-slider-bottom')
+									div(class='rewiews-slider-time') Срок подключения 1 день
+									div(class='rewiews-slider-autor') Александра
+					div(class='swiper-pagination-rewiews')
+			
+
+		div(class='form-bottom-wrap' style='background-color: #191919;')
 			div(class='container')
 				div(class='row')
-					div(class='why-our-box')
-						div(class='why-our-box__left')
-							div(class='title') Почему именно мы?
-							p Таким образом новая модель организационной 
-							|деятельности позволяет оценить значение новых 
-							|предложений. С другой стороны новая модель 
-							|организационной деятельности способствует 
-							|подготовки и реализации модели развития.
-						div(class='why-our-box_right')
-				
-
-
+					div(class='form-bottom-box')
+						div(class='title') Есть вопросы?
+						div(class='desc') Оставьте заявку и мы перезвоним Вам
+						form(class='form-bottom', action='/', method='POST')
+							span <input type='text' placeholder='Ваше имя' />
+							span <input type='tel' placeholder='Ваш телефон' />
+							button(type='submit', class='btn') Перезвоните мне
+						div(class='agree') Нажимая кнопку “Перезвоните мне” Вы соглашаетесь на обработку Ваших данных
+						div(class='man') <img src='assets/images/man.png' alt='' />
+		footer(class='footer', style='background-color: #191919;', id='contacts')
+			div(class='container')
+				div(class='footer-box')
+					a(class='logo', href='#') <img src="assets/images/logo.svg" alt="" /> <div class="logo-text"> <b>Муж на 60 минут</b> <span>Услуги мужа на час для одиноких женщин</span> </div>
+					ul(class="top-menu")  
+						li
+							a(href="#services") Услуги
+						li
+							a(href="#about") О нас
+						li
+							a(href="#rewiews") Отзывы
+						li
+							a(href="#contacts") Контакты
+					div(class="header-contact")
+						a(class="phone", href="tel:88007008000") 8 (800) 700-8000
+						a(class="btn", href="javascript:void (0);", data-toggle="modal", data-target="#modal") Заказать звонок
+				div(class='copyright')
+					a(href='#') Политика конфиденциальности
+					span Представленная информация на сайте не является публичной офертой
 
 		include ../components/modal/modal
 		block content

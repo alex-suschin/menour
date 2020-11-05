@@ -2,3 +2,13 @@ mixin modal(data)
     .modal.fade#modal(tabindex='-1' aria-hidden='true')
         .modal-dialog.modal-dialog-centered
             .modal-content
+                .popup-close(data-dismiss="modal")
+                .popup-title Связь с нами
+                .popup-desc Заполните форму ниже и мы перезвоним Вам через 5 минут
+                form.form-popup(method='POST', action='/')
+                    span <input type='text' placeholder='Ваше имя' />
+                    span <input type='tel' placeholder='Ваш телефон' />
+                    button(type='submit', class='btn') Связаться с нами
+                    .agree.
+                        Нажимая кнопку «Связаться с нами» Вы соглашаетесь на обработк<br> 
+                        Ваших персональных данных
